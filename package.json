@@ -1,0 +1,21 @@
+{
+  "name": "beer-rec-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derekensign/beer-rec-back-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derekensign/beer-rec-back-end/issues"
+  },
+  "homepage": "https://github.com/derekensign/beer-rec-back-end#readme"
+}
