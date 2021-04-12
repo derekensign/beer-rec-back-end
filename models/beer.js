@@ -15,9 +15,11 @@ module.exports = (sequelize, DataTypes) => {
   };
   beer.init({
     name: DataTypes.STRING,
+    description: DataTypes.TEXT,
     style: DataTypes.STRING,
+    imageurl: DataTypes.TEXT,
     brewery: DataTypes.STRING,
-    city: DataTypes.STRING
+    address: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'beer',
