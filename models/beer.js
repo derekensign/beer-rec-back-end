@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      models.beer.belongsToMany(models.user, {through: 'favbeer' })
+      models.beer.belongsToMany(models.user, {through: 'favBeer' })
     }
   };
   beer.init({
