@@ -23,7 +23,6 @@ beerController.search = async (req,res) => {
 
 beerController.favorite = async (req, res) => {
 
-    console.log(req)
     try {
         const beer = await models.beer.findOne({
             where: {
@@ -35,7 +34,7 @@ beerController.favorite = async (req, res) => {
 
         const user = await models.user.findOne({
             where: {
-                id: req.params.userId
+                id: req.headers.authorization
             }
         })
 
