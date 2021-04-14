@@ -43,7 +43,7 @@ userController.profile = async (req,res) => {
     try {
         const user = await models.user.findOne({
             where: {
-                id: req.headers.authorization
+                id: req.query.id
             }
         })
         
