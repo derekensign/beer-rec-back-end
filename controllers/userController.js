@@ -37,4 +37,24 @@ userController.login = async (req, res) => {
     }
 }
 
+userController.profile = async (req,res) => {
+
+    console.log(req)
+    try {
+        const user = await models.user.findOne({
+            where: {
+                id: req.headers.authorization
+            }
+        })
+        
+        beers = await user.getBeers()
+        console.log(beers)
+        res.send(beers)
+
+    } catch (error) {
+        console.log(error)
+        res.json({error})
+    }
+}
+
 module.exports = userController
