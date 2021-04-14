@@ -49,24 +49,5 @@ beerController.favorite = async (req, res) => {
     }
 }
 
-beerController.profile = async (req,res) => {
-
-    console.log(req)
-    try {
-        const user = await models.user.findOne({
-            where: {
-                id: req.body.id
-            }
-        })
-        
-        beers = await user.getBeers()
-        console.log(beers)
-        res.send(beers)
-
-    } catch (error) {
-        console.log(error)
-        res.json({error})
-    }
-}
 
 module.exports = beerController
